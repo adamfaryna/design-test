@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Samsung S4 mobile display test</title>
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+    span {
+        display: block;
+        font-weight: bold;
+    }
+
+    iframe {
+        display: block;
+        margin-bottom: 15em;
+        -moz-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+
+        /*Samsung S4*/
+        width: 320px;
+        height: 640px;
+    }
+
+    #controls {
+        margin: 1em 0 1em 0;
+    }
+</style>
+
+<div>
+    <h1>Samsung S4 mobile display test</h1>
+</div>
+
+<div id="controls">
+    <label for="zoomController">Zoom Level</label>
+    <input id="zoomController" name="zoom" value="1">
+</div>
+
+<span>Offer Loan:</span>
+<iframe id="iframe" src="http://localhost:3000" scrolling="yes"></iframe>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+//      $('#iframe').load(function () {
+//        var documentElem = this.contentDocument;
+//        var windowElem = this.contentWindow;
+//
+//        var w = Math.max(documentElem.clientWidth, windowElem.innerWidth || 0)
+//        var h = Math.max(documentElem.clientHeight, windowElem.innerHeight || 0)
+//
+//        $('#iframeViewport').html(w + "x" + h);
+//      });
+
+      $('#zoomController').change(function () {
+          var newValue = $(this).val();
+          var scale = 'scale(' + newValue + ')';
+
+          $('iframe')
+              .css('-moz-transform', scale)
+              .css('-o-transform', scale)
+              .css('-webkit-transform', scale)
+              .css('-ms-transform', scale);
+      });
+    });
+</script>
+</body>
+</html>

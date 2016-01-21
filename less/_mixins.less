@@ -1,6 +1,24 @@
+.square-image (@length, @filename) {
+	// height: auto;
+ //  width: auto;
+ //  max-width: @length;
+ //  max-height: @length;
+ 	height: @length;
+  width: @length;
+  background-image: url("../img/@{filename}");
+  background-repeat: no-repeat;
+}
+
 .square-image (@length) {
-	height: auto;
-  width: auto;
-  max-width: @length;
-  max-height: @length;
+  height: @length;
+  width: @length;
+  	// height: auto;
+ //  width: auto;
+ //  max-width: @length;
+ //  max-height: @length;
+}
+
+.social-media-img (@length, @filename) {
+	.square-image(@length, @filename);
+	display: inline-block;
 }
