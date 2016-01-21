@@ -21,7 +21,7 @@ gulp.task('serve', ['less'], function() {
 // Compile less into CSS & auto-inject into browsers
 gulp.task('less', function() {
   return gulp.src('less/style.less')
-    .pipe(less({ plugins: [autoprefix, cleancss] }))
+    .pipe(less({ plugins: [autoprefix] }))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream());
 });

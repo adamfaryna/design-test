@@ -1,9 +1,12 @@
 @import "_variables";
 @import "_mixins";
-@import "_widget";
 
 * {
   font-family: @default-font;
+}
+
+body {
+  margin-bottom: 0;
 }
 
 #page-wrapper {
@@ -21,6 +24,7 @@ nav.page-nav {
   border: 1px solid;
   text-align: justify;
   padding: 7px 7px 0px 7px;
+  background-color: lightgray;
 
   ul {
     // display: table;
@@ -60,6 +64,13 @@ header.page-header {
   }
 }
 
+footer.page-footer {
+  background-color: lightgray;
+  width: 100%;
+  height: 40px;
+  border: 1px solid;
+}
+
 .entry-header {
   margin: 20px 0px 5px 5px;
 }
@@ -86,7 +97,7 @@ aside.articles-snapshots {
   margin: 0px 0px 5px 5px;
   font-size: 23px;
 
-  article-snapshot h3 {
+  .article-snapshot h3 {
     margin-bottom: 5px;
   }
 }
@@ -97,9 +108,20 @@ aside.articles-snapshots {
   }
 }
 
-.article-img {
-  .square-image(600px);
+article {
+  .entry-content {
+    font-size: 20px;
+  }
+
+  .article-img {
+    .square-image(600px);
+  }
+
+  .entry-more-links {
+    float: right;
+  }
 }
+
 
 .entry-more-links {
   h3.entry-more-links-header {
