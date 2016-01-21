@@ -1,0 +1,12 @@
+{
+  "name": "csszengarden-sass",
+  "version": "1.0.0",
+  "authors": ["Adam Faryna (https://github.com/adamfaryna)"],
+  "description": "CSS Zen Garden project using Sass, Gulp, NPM.",
+  "license": "MIT",
+  "homepage": "https://github.com/adamfaryna",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ]
+}
