@@ -44,20 +44,8 @@
 
 <iframe id="iframe" src="http://localhost:3000" scrolling="yes"></iframe>
 
-<iframe id="another" src="http://adamfaryna.com" scrolling="yes"></iframe>
-
 <script type="text/javascript">
     $(document).ready(function () {
-//      $('#iframe').load(function () {
-//        var documentElem = this.contentDocument;
-//        var windowElem = this.contentWindow;
-//
-//        var w = Math.max(documentElem.clientWidth, windowElem.innerWidth || 0)
-//        var h = Math.max(documentElem.clientHeight, windowElem.innerHeight || 0)
-//
-//        $('#iframeViewport').html(w + "x" + h);
-//      });
-
       $('#zoomController').change(function () {
           var newValue = $(this).val();
           var scale = 'scale(' + newValue + ')';
